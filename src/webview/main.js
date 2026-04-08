@@ -235,7 +235,7 @@ function createCard(task) {
 function buildTooltip(task) {
   const lines = [];
   lines.push(`#${task.id} — ${task.subject}`);
-  lines.push(`Status: ${task.status.replace('_', ' ')}`);
+  lines.push(`Status: ${task.status.replace(/_/g, ' ')}`);
   if (task.owner) {
     lines.push(`Owner: ${currentEmojiMap.get(task.owner) || ''} ${task.owner}`);
   }
